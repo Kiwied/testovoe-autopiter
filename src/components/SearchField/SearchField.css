@@ -1,0 +1,30 @@
+.orgs__search {
+  border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 688px;
+  height: 46px;
+  padding: 0 16px;
+  font-size: 14px;
+  line-height: 188.55%;
+  color: #777777;
+}
+
+.orgs__search:focus {
+  border-color: black;
+  outline: none;
+}
+
+.orgs__search::placeholder {
+  color: #B9B9B9;
+}
+
+.orgs__suggestions {
+  border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  border-radius: 0 0 3px 3px;
+  position: fixed;
+  background-color: white;
+  width: 688px;
+  padding-top: 17px;
+}

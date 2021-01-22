@@ -1,0 +1,81 @@
+.saved-result {
+  border: 1px solid #DFDFDF;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 16px;
+  position: relative;
+  margin-bottom: 21px;
+}
+
+.saved-result:last-of-type {
+  margin-bottom: 0;
+}
+
+.saved-result__name {
+  max-width: 523px;
+  font-size: 18px;
+  line-height: 188.55%;
+  margin: 0;
+}
+
+.saved-result__data-container {
+  max-width: 523px;
+}
+
+.saved-result__data {
+  font-size: 12px;
+  line-height: 188.55%;
+  margin: 0;
+}
+
+.saved-result__data_span {
+  color: #777777;
+  margin-right: 8px;
+}
+
+.saved-result__delete-btn {
+  width: 15px;
+  height: 18px;
+  border: none;
+  background-image: url("../../images/trash-icon.svg");
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  transition: opacity .1s ease-in;
+}
+
+.saved-result__delete-btn:hover {
+  opacity: .7;
+}
+
+.saved-result__delete-btn:focus {
+  outline: none;
+}
+
+.saved-result__details-btn {
+  border: none;
+  background: none;
+  font-size: 10px;
+  line-height: 188.55%;
+  text-decoration-line: underline;
+  color: #777777;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity .1s ease-in;
+}
+
+.saved-result__details-btn:hover {
+  opacity: .7;
+}
+
+.saved-result__details-btn:focus {
+  outline: none;
+}
+
+.saved-result__details-icon {
+  margin-left: 4px;
+}

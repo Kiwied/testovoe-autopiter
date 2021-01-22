@@ -1,0 +1,18 @@
+.header {
+  background-color: white;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo {
+  background-image: url("../../images/logo.svg");
+  height: 48px;
+  width: 51.77px;
+  transition: opacity .2s ease-in;
+}
+
+.header__logo:hover {
+  opacity: .8;
+}

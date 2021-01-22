@@ -1,0 +1,32 @@
+.suggestion {
+  height: 53px;
+  padding: 7px 19px 0;
+  transition: padding .1s ease-in;
+}
+
+.suggestion_hover {
+  background-color: #F8F8F8;
+  cursor: pointer;
+  padding: 7px 24px 0;
+}
+
+.suggestion:hover {
+  background-color: #F8F8F8;
+  cursor: pointer;
+  padding: 7px 24px 0;
+}
+
+.suggestion__name {
+  font-size: 14px;
+  line-height: 140%;
+  color: #2B292A;
+  margin: 0 0 4px;
+  font-weight: bold;
+}
+
+.suggestion__info {
+  font-size: 12px;
+  line-height: 140%;
+  color: #2B292A;
+  margin: 0;
+}
