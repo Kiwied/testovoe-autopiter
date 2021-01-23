@@ -11,6 +11,29 @@ function App() {
   const [isInputFocused, setIsInputFocused] = React.useState(false);
   const [savedResults, setSavedResults] = React.useState([]);
 
+  // проверка для фокусировки/блюра инпута и тем самым
+  // показа/скрытия "подсказок"
+  React.useEffect(() => {
+    const evtLstn = (evt) => {
+      if (evt.target.classList.contains('orgs__search')
+        || evt.target.classList.contains('suggestion')
+        || evt.target.parentElement.classList.contains('suggestion'))
+      {
+        setIsInputFocused(true);
+      } else {
+        setIsInputFocused(false);
+      }
+    }
+    document.getElementById('app').addEventListener('click', evtLstn);
+    return () => document.getElementById('app').removeEventListener('click', evtLstn);
+  }, [isInputFocused])
+
+  // проверка на сохраненные организации с прошлых сессий
+  React.useEffect(() => {
+    localStorage.getItem('saved') && setSavedResults(JSON.parse(localStorage.getItem('saved')));
+  }, [])
+
+  // запрос к серверу для получения массива Подсказок
   const fetchSuggestions = (query) => {
     const url = "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/party";
     const token = "2a20a4f21d4938545a386b96e095f8a2c7eb272a";
@@ -38,27 +61,6 @@ function App() {
       .catch(error => console.log("error", error));
 
   }
-
-  // проверка для фокусировки/блюра инпута и тем самым
-  // показа/скрытия "подсказок"
-  React.useEffect(() => {
-    const evtLstn = (evt) => {
-      if (evt.target.classList.contains('orgs__search')
-        || evt.target.classList.contains('suggestion')
-        || evt.target.parentElement.classList.contains('suggestion'))
-      {
-        setIsInputFocused(true);
-      } else {
-        setIsInputFocused(false);
-      }
-    }
-    document.getElementById('app').addEventListener('click', evtLstn);
-    return () => document.getElementById('app').removeEventListener('click', evtLstn);
-  }, [isInputFocused])
-
-  React.useEffect(() => {
-    localStorage.getItem('saved') && setSavedResults(JSON.parse(localStorage.getItem('saved')));
-  }, [])
 
   return (
     <div className="app" id="app">
