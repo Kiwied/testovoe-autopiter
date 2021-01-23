@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/testovoe-autopiter/static/css/main.e8f86395.chunk.css",
+    "main.js": "/testovoe-autopiter/static/js/main.78bef7cd.chunk.js",
+    "main.js.map": "/testovoe-autopiter/static/js/main.78bef7cd.chunk.js.map",
+    "runtime-main.js": "/testovoe-autopiter/static/js/runtime-main.a2d96b3c.js",
+    "runtime-main.js.map": "/testovoe-autopiter/static/js/runtime-main.a2d96b3c.js.map",
+    "static/js/2.fe196193.chunk.js": "/testovoe-autopiter/static/js/2.fe196193.chunk.js",
+    "static/js/2.fe196193.chunk.js.map": "/testovoe-autopiter/static/js/2.fe196193.chunk.js.map",
+    "index.html": "/testovoe-autopiter/index.html",
+    "static/css/main.e8f86395.chunk.css.map": "/testovoe-autopiter/static/css/main.e8f86395.chunk.css.map",
+    "static/js/2.fe196193.chunk.js.LICENSE.txt": "/testovoe-autopiter/static/js/2.fe196193.chunk.js.LICENSE.txt",
+    "static/media/arrow-down.464346d5.svg": "/testovoe-autopiter/static/media/arrow-down.464346d5.svg",
+    "static/media/arrow-up.cd00e8cb.svg": "/testovoe-autopiter/static/media/arrow-up.cd00e8cb.svg",
+    "static/media/Header.css": "/testovoe-autopiter/static/media/logo.b8f9efc2.svg",
+    "static/media/ok-sign.e7e20d18.svg": "/testovoe-autopiter/static/media/ok-sign.e7e20d18.svg",
+    "static/media/plus_sign.d5763053.svg": "/testovoe-autopiter/static/media/plus_sign.d5763053.svg",
+    "static/media/SavedResult.css": "/testovoe-autopiter/static/media/trash-icon.1d8a2167.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2d96b3c.js",
+    "static/js/2.fe196193.chunk.js",
+    "static/css/main.e8f86395.chunk.css",
+    "static/js/main.78bef7cd.chunk.js"
+  ]
+}
