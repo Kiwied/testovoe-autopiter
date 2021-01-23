@@ -12,9 +12,9 @@ export default function SearchResult({ result, setSavedResults, savedResults }) 
   }, [])
 
   function handleSaveResult() {
-    setSavedResults([...savedResults, result]);
+    setSavedResults([result, ...savedResults]);
     localStorage.removeItem('saved');
-    localStorage.setItem('saved', JSON.stringify([...savedResults, result]));
+    localStorage.setItem('saved', JSON.stringify([result, ...savedResults]));
     setIsResultSaved(true);
   }
 
