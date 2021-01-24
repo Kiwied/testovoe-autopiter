@@ -1,9 +1,9 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import './App.css';
-import Header from "../Header/Header";
-import Main from "../Main/Main";
+import './components/App/App.css';
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
 
 function App() {
   const [result, setResult] = React.useState({});
