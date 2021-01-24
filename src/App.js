@@ -1,9 +1,11 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 
-import './components/App/App.css';
+import './App.css';
 import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
+import NavBar from "./components/NavBar/NavBar";
+import NewOrgPage from "./pages/NewOrgPage";
+import SavedOrgsPage from "./pages/SavedOrgsPage";
 
 function App() {
   const [result, setResult] = React.useState({});
@@ -59,23 +61,44 @@ function App() {
       })
       .then(res => setSuggestions(res.suggestions))
       .catch(error => console.log("error", error));
-
   }
+
+
 
   return (
     <div className="app" id="app">
       <Header/>
-      <Main isRouteSaved={false}
-            savedResults={savedResults}
-            setSavedResults={setSavedResults}
-            fetchSuggestions={fetchSuggestions}
-            result={result}
-            setResult={setResult}
-            suggestions={suggestions}
-            setSuggestions={setSuggestions}
-            isInputFocused={isInputFocused}
-            setIsInputFocused={setIsInputFocused}
-      />
+
+      <main className="main">
+        <h1 className="main__title">Мои организации</h1>
+
+        <section className="main__container">
+          <NavBar savedResults={savedResults}
+                  setResult={setResult}
+                  setSuggestions={setSuggestions}
+          />
+
+          <Switch>
+            <Route exact path="/">
+              <NewOrgPage fetchSuggestions={fetchSuggestions}
+                          suggestions={suggestions}
+                          setResult={setResult}
+                          setIsInputFocused={setIsInputFocused}
+                          isInputFocused={isInputFocused}
+                          result={result}
+                          setSavedResults={setSavedResults}
+                          savedResults={savedResults}
+              />
+            </Route>
+
+            <Route path="/saved">
+              <SavedOrgsPage savedResults={savedResults}
+                             setSavedResults={setSavedResults}
+              />
+            </Route>
+          </Switch>
+        </section>
+      </main>
     </div>
   );
 }
