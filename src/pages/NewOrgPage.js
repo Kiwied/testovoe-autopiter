@@ -20,7 +20,7 @@ export default function NewOrgPage({ fetchSuggestions, suggestions, setResult,
 
   return (
     <div className="orgs">
-      <h3 className="orgs__title">Организация или ИП</h3>
+      <label className="orgs__title" htmlFor="input">Организация или ИП</label>
       <SearchField fetchSuggestions={fetchSuggestions}
                    suggestions={suggestions}
                    setResult={setResult}
