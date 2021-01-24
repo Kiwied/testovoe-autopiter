@@ -11,3 +11,5 @@
 * localStorage для запоминания уже сохранненных организаций
 
 **[Ссылка на GitHub Pages](https://kiwied.github.io/testovoe-autopiter/)**
+
+**[Ссылка на репозиторий с Typescript](https://github.com/Kiwied/testovoeTS-autopiter)**
