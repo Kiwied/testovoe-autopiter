@@ -6,6 +6,7 @@ import okIcon from '../../images/ok-sign.svg';
 export default function SearchResult({ result, setSavedResults, savedResults }) {
   const [isResultSaved, setIsResultSaved] = React.useState(false);
 
+  // проверка сохранена ли уже эта организация
   React.useEffect(() => {
     setIsResultSaved(false);
     savedResults.map((org) => org.data.inn === result.data.inn && setIsResultSaved(true));
